@@ -1,3 +1,4 @@
+//App.js
 import React, { useState } from "react";
 
 function App() {
@@ -32,10 +33,10 @@ function App() {
     <div>
       <div>
         What is 
-        <input value={input1} onChange={e => setInput1(e.target.value)} /> % of 
-        <input value={input2} onChange={e => setInput2(e.target.value)} />?
+        <input placeholder="Input 1" value={input1} onChange={e => setInput1(e.target.value)} /> % of 
+        <input placeholder="Input 2" value={input2} onChange={e => setInput2(e.target.value)} />?
         <button onClick={handleCalculate1}>Calculate</button>
-        <div>{output1}</div>
+        <div>{output1 ? output1.toFixed(2) : ''}</div>
       </div>
       <div>
         <input value={input3} onChange={e => setInput3(e.target.value)} /> is what percentage of 
