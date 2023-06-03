@@ -192,6 +192,17 @@ footer a {
     float: left;
     width: 60%;
   }
+  
+  .calculator-button {
+    background: #369;
+    color: #fff;
+    font-size: 1.3rem;
+    /* float: right; */
+    /* font-weight: 600; */
+    /* padding: 10px; */
+    /* text-transform: uppercase; */
+  }
+
   .form .results {
     float: right;
     width: 20%;
@@ -202,7 +213,13 @@ footer a {
   }
   .remove {
     display: inline;
+  }/* 
+  .form .input-area {
+    width: 60%;
   }
+  .form .results-area {
+    width: 20% */;
+  
 }
 body {
   text-align: center;
