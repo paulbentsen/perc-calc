@@ -86,6 +86,7 @@ ul, li {
 }
 
 .form input {
+  width: 85px;
   border: 1px solid #ccc;
   border-radius: 3px;
   font-family: "Helvetica Neue", Arial, sans-serif;
@@ -193,7 +194,7 @@ footer a {
   }
   .form .results {
     float: right;
-    width: 40%;
+    width: 20%;
     text-align: right;
   }
   .tips {
@@ -235,3 +236,40 @@ main {
   }
 }
 
+.input-area {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.results-area {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.calculator-button {
+  height: 40px;
+  width: 85px;
+  font-size: 16px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  color: white;
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.results {
+  display: flex;
+  width: 50%;
+  height: 40px;
+  line-height: 40px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  text-align: center;
+}
