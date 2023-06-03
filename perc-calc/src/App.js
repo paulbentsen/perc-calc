@@ -1,5 +1,6 @@
 //App.js
 import React, { useState } from "react";
+import "./App.css";
 
 function App() {
   const [input1, setInput1] = useState('');
@@ -16,43 +17,45 @@ function App() {
 
   const handleCalculate1 = () => {
     const result = (input1 / 100) * input2;
-    setOutput1(result);
+    setOutput1(result.toFixed(2));
   }
 
   const handleCalculate2 = () => {
     const result = (input3 / input4) * 100;
-    setOutput2(result);
+    setOutput2(result.toFixed(2));
   }
-
+  
   const handleCalculate3 = () => {
     const result = ((input6 - input5) / input5) * 100;
-    setOutput3(result);
+    setOutput3(result.toFixed(2));
   }
+  
 
-  return (
-    <div>
-      <div>
-        What is 
-        <input placeholder="Input 1" value={input1} onChange={e => setInput1(e.target.value)} /> % of 
-        <input placeholder="Input 2" value={input2} onChange={e => setInput2(e.target.value)} />?
-        <button onClick={handleCalculate1}>Calculate</button>
-        <div>{output1 ? output1.toFixed(2) : ''}</div>
-      </div>
-      <div>
-        <input value={input3} onChange={e => setInput3(e.target.value)} /> is what percentage of 
-        <input value={input4} onChange={e => setInput4(e.target.value)} />?
-        <button onClick={handleCalculate2}>Calculate</button>
-        <div>{output2}</div>
-      </div>
-      <div>
-        What is the percentage increase/decrease from 
-        <input value={input5} onChange={e => setInput5(e.target.value)} /> to 
-        <input value={input6} onChange={e => setInput6(e.target.value)} />?
-        <button onClick={handleCalculate3}>Calculate</button>
-        <div>{output3}</div>
-      </div>
+  // JSX code in App.js
+return (
+  <main className="calculator">
+    <div className="form">
+      What is 
+      <input className="calculator-input" value={input1} onChange={e => setInput1(e.target.value)} /> % of 
+      <input className="calculator-input" value={input2} onChange={e => setInput2(e.target.value)} />?
+      <button className="calculator-button" data-testid="calculate1-button" onClick={handleCalculate1}>Calculate</button>
+      <div className="results">{output1}</div>
     </div>
-  );
+    <div className="form">
+      <input className="calculator-input" value={input3} onChange={e => setInput3(e.target.value)} /> is what percentage of 
+      <input className="calculator-input" value={input4} onChange={e => setInput4(e.target.value)} />?
+      <button className="calculator-button" data-testid="calculate2-button" onClick={handleCalculate2}>Calculate</button>
+      <div className="results">{output2}</div>
+    </div>
+    <div className="form">
+      What is the percentage increase/decrease from 
+      <input className="calculator-input" value={input5} onChange={e => setInput5(e.target.value)} /> to 
+      <input className="calculator-input" value={input6} onChange={e => setInput6(e.target.value)} />?
+      <button className="calculator-button" data-testid="calculate3-button" onClick={handleCalculate3}>Calculate</button>
+      <div className="results">{output3}</div>
+    </div>
+  </main>
+);
 }
 
 export default App;
